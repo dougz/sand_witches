@@ -19,7 +19,7 @@ class Message {
 	this.blanks;
 	/** @type{?string} */
 	this.answer;
-        /** @type{?Array<string,string} */
+        /** @type{?Array<string,string>} */
         this.all;
     }
 }

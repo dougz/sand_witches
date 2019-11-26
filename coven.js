@@ -66,8 +66,10 @@ class CovenDispatcher {
         var table = goog.dom.createDom("TABLE", "covall");
         for (var i = 0; i < msg.all.length; ++i) {
             var a = msg.all[i];
+            var td = goog.dom.createDom("TD", "covallclue");
+            td.innerHTML = a[0];
             var tr = goog.dom.createDom("TR", null,
-                                        goog.dom.createDom("TD", "covallclue", a[0]),
+                                        td,
                                         goog.dom.createDom("TD", "covallanswer", a[1]));
             table.appendChild(tr);
         }
