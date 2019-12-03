@@ -49,12 +49,12 @@
     flex-wrap: wrap;
 }
 
-#puzz .covallclue {
+#puzz .sandallclue {
     font-weight: normal;
     font-size: 84%;
     text-align: left;
 }
-#puzz .covallanswer {
+#puzz .sandallanswer {
     font-family: 'Inconsolata', monospace;
     text-align: left;
     padding-left: 20px;

@@ -8,19 +8,19 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--debug", action="store_true")
 options = parser.parse_args()
 
-with zipfile.ZipFile("coven.zip", mode="w") as z:
+with zipfile.ZipFile("sand_witches.zip", mode="w") as z:
   with z.open("puzzle.html", "w") as f_out:
-    with open("coven.html", "rb") as f_in:
+    with open("sand_witches.html", "rb") as f_in:
 
       html = f_in.read()
 
       if options.debug:
-        head = ('<link rel=stylesheet href="/covdebug/coven.css" />'
+        head = ('<link rel=stylesheet href="/sanddebug/sand_witches.css" />'
                 '<script src="/closure/goog/base.js"></script>'
-                '<script src="/covdebug/coven.js"></script>')
+                '<script src="/sanddebug/sand_witches.js"></script>')
       else:
-        head = ('<link rel=stylesheet href="coven.css" />'
-                '<script src="coven-compiled.js"></script>')
+        head = ('<link rel=stylesheet href="sand_witches.css" />'
+                '<script src="sand_witches-compiled.js"></script>')
 
       html = html.replace(b"@HEAD@", head.encode("utf-8"))
 
@@ -35,11 +35,11 @@ with zipfile.ZipFile("coven.zip", mode="w") as z:
       f_out.write(f_in.read())
 
   if not options.debug:
-    with z.open("coven.css", "w") as f_out:
-      with open("coven.css", "rb") as f_in:
+    with z.open("sand_witches.css", "w") as f_out:
+      with open("sand_witches.css", "rb") as f_in:
         f_out.write(f_in.read())
 
-    with z.open("coven-compiled.js", "w") as f_out:
-      with open("coven-compiled.js", "rb") as f_in:
+    with z.open("sand_witches-compiled.js", "w") as f_out:
+      with open("sand_witches-compiled.js", "rb") as f_in:
         f_out.write(f_in.read())
 

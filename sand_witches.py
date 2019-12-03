@@ -152,7 +152,7 @@ class GameState:
         return True
 
 
-class CovenApp(scrum.ScrumApp):
+class SandWitchesApp(scrum.ScrumApp):
   async def on_wait(self, team, session, wid):
     gs = GameState.get_for_team(team)
 
@@ -229,7 +229,7 @@ def make_app(options):
      "HEAT EARS, SVEN"),
     ("Solo's attempt to get laughs", "HAN'S COMEDY"),
     ("Overheard at the Taj Mahal: \"That's an almond, not a pistachio!\"", "AGRA NUT ID"),
-    ("Whan you need to sport on your face and chin before heading to your job in the coal shafts",
+    ("What you need to sport on your face and chin before heading to your job in the coal shafts",
      "MINE BEARD"))]
 
   assert len(clues) == 13
@@ -237,16 +237,16 @@ def make_app(options):
   GameState.set_globals(options, clues)
 
   handlers = [
-    (r"/covsubmit", SubmitHandler),
-    (r"/covskip", SkipHandler),
+    (r"/sandsubmit", SubmitHandler),
+    (r"/sandskip", SkipHandler),
   ]
   if options.debug:
-    handlers.append((r"/covdebug/(\S+)", DebugHandler))
+    handlers.append((r"/sanddebug/(\S+)", DebugHandler))
   return handlers
 
 
 def main():
-  parser = argparse.ArgumentParser(description="Run the coven puzzle.")
+  parser = argparse.ArgumentParser(description="Run the sand_witches puzzle.")
   parser.add_argument("--debug", action="store_true",
                       help="Run in debug mode.")
   parser.add_argument("--assets_json", default=None,
@@ -256,7 +256,7 @@ def main():
                       help="Secret used to create session cookies.")
   parser.add_argument("--listen_port", type=int, default=2006,
                       help="Port requests from frontend.")
-  parser.add_argument("--wait_url", default="covwait",
+  parser.add_argument("--wait_url", default="sandwait",
                       help="Path for wait requests from frontend.")
   parser.add_argument("--main_server_port", type=int, default=2020,
                       help="Port to use for requests to main server.")
@@ -265,7 +265,7 @@ def main():
 
   options = parser.parse_args()
 
-  app = CovenApp(options, make_app(options))
+  app = SandWitchesApp(options, make_app(options))
   app.start()
 
 
