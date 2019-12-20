@@ -34,6 +34,9 @@ with zipfile.ZipFile("sand_witches.zip", mode="w") as z:
     with open("metadata.yaml", "rb") as f_in:
       f_out.write(f_in.read())
 
+  z.write("static_puzzle.html")
+  z.write("static_clue_checker.js")
+
   if not options.debug:
     with z.open("sand_witches.css", "w") as f_out:
       with open("sand_witches.css", "rb") as f_in:

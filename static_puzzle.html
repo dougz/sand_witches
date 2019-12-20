@@ -1,0 +1,80 @@
+<head>
+  <style>
+    span.blankity { font-weight: bold; }
+  </style>
+  <script src="static_clue_checker.js"></script>
+</head>
+
+<div class=fourthwall style="background-color: white; border: 2px dotted blue; padding: 1em;">
+
+  <p>
+    This puzzle was a "scrum": many people on the team could collaborate with a shared view of the puzzle.
+    Everyone would see the same clue at the same time, anyone could guess an answer to that clue.
+    The server told the team about right clue-answers.
+    When the team had all the clue-answers, the server displayed them all.
+  </p>
+  <p>
+    Here we show the clues and blanks. There is also a clue-answer checker. (It won't check the puzzle's final
+    answer; it only knows about clue-answers.)
+  </p>
+
+<p>
+Injure a package delivery service <br>
+<span class=blankity id=bl1>_ _ _ _ &emsp; _ _ _</span>
+
+<p>
+Amount you have to put up to get on a horse	<br>
+<span class=blankity id=bl2>_ _ _ _ _ &emsp; _ _ &emsp; _ _ _ _</span>
+
+<p>
+Made the number before two reallllly long	<br>
+<span class=blankity id=bl3>_ _ _ _ _ _ _ _ _ &emsp; _ _ _</span>
+
+<p>
+Outbid everyone to get some better real estate	<br>
+<span class=blankity id=bl4>_ _ _ &emsp; _ _ _ _ : &emsp; _ _ _ _ _ &emsp; _ _ _ _</span>
+
+<p>
+The period in your life where you are taking care of someone (or working at a bar)	<br>
+<span class=blankity id=bl5>_ _ _ _ _ _ _ &emsp; _ _ _ _ _</span>
+
+<p>
+Declare that it's Mr. Offerman's fault	<br>
+<span class=blankity id=bl6>_ _ _ _ _ &emsp; _ _ _ _</span>
+
+<p>
+A bit of cheese, split evenly among the entire rodent household when times are tough	<br>
+<span class=blankity id=bl7>_ _ _ _ _ &emsp; _ _ _ &emsp; _ _ _ _ _ _</span>
+
+<p>
+"Hold up, boy! I am fixing my shoelaces, which seem to have come undone."	<br>
+<span class=blankity id=bl8>_ _ _ _ &emsp; _ _ _ , &emsp; _ _ _ _ _</span>
+
+<p>
+Trips to and from the end of the pool where you don't really mean it	<br>
+<span class=blankity id=bl9>_ _ _ _ _ _ &emsp; _ _ _ _</span>
+
+<p>
+Command to Kristof's reindeer: "Make these corncobs warmer!"	<br>
+<span class=blankity id=bl10>_ _ _ _ &emsp; _ _ _ _ , &emsp; _ _ _ _</span>
+
+<p>
+Solo's attempt to get laughs	<br>
+<span class=blankity id=bl11>_ _ _'_ &emsp; _ _ _ _ _ _</span>
+
+<p>
+Overheard at the Taj Mahal: "That's an almond, not a pistachio!"	<br>
+<span class=blankity id=bl12>_ _ _ _ &emsp; _ _ _ &emsp; _ _</span>
+
+<p>
+Whan you need to sport on your face and chin before heading to your job in the coal shafts<br>
+<span class=blankity id=bl13>_ _ _ _ &emsp; _ _ _ _ _</span>
+
+
+<div>
+  <input type=text placeholder=guess id=guesstext> <button onClick="doCheck()">Check</button> <span id=checkstatus> </span>
+</div>
+<script>
+  document.getElementById('guesstext').addEventListener('keyup', maybeCheck)
+</script>
+</div>
