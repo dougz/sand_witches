@@ -5,11 +5,12 @@ answer: THORNY ISSUE
 author:
   - Yar Woo
   - Ian Tullis
+  - Doug Zongker
 
 oncall: dougz@isotropic.org
-puzzletron_id: -1
+puzzletron_id: 265
 
 obfuscate_assets: true
 
-for_ops_url: https://docs.google.com/document/d/1RiIb3ekmEY4Ry-x-IOkrgCgrOUCcS8s-m4CRl7zKWtI/edit
+for_ops_url: https://docs.google.com/document/d/1rhYmsuvAwGE-tf3MuT0sVSKQD6PVePT8mDhQcwUV1lM/edit
 
