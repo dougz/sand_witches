@@ -21,5 +21,7 @@ class Message {
 	this.answer;
         /** @type{?Array<string,string>} */
         this.all;
+	/** @type{?string} */
+	this.players;
     }
 }
