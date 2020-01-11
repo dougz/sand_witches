@@ -251,7 +251,7 @@ def make_app(options):
     ("\"Hold up, boy!  I am fixing my shoelaces, which seem to have come undone.\"",
      "WAIT LAD, TYING"),
     ("Trips to and from the end of the pool where you don't really mean it", "IRONIC LAPS"),
-    ("Command to Kristof's reindeer: \"Make these corncobs warmer!\"",
+    ("Command to Kristoff's reindeer: \"Make these corncobs warmer!\"",
      "HEAT EARS, SVEN"),
     ("Solo's attempt to get laughs", "HAN'S COMEDY"),
     ("Overheard at the Taj Mahal: \"That's an almond, not a pistachio!\"", "AGRA NUT ID"),

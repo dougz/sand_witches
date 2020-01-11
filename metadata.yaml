@@ -2,6 +2,9 @@ shortname: sand_witches
 title: Sand Witches
 answer: THORNY ISSUE
 
+responses:
+  HORNY IN TISSUE: ~
+
 scrum: true
 
 author:
